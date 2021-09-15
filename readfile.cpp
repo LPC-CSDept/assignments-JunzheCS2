@@ -19,6 +19,7 @@ int main() {
 
   for(int i = 0; i < 10; i++) //save all data
   {
+    // Line 23-28: indentation required
   stu >> s.id; //save
   stu >> s.name; // save name
   stu >> s.score[0];
@@ -38,6 +39,9 @@ int main() {
   for(int i = 0 ; i < 10 ; i++)
   {
     ofs.write((char *)&s, sizeof(s));
+    // s was declared single struct varialbe at line 16.
+    // This for loop trying to write the same value s 10 times repeatedly
+    
   }
 
 }
