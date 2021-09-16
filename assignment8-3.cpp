@@ -27,13 +27,14 @@ int main() {
         minidx = i;
       }
     }
-    return i;
+    return ith;
   }
 
-  int printArray(int [], int x)
+  int printArray(int a[], int x)
   {
     for(int i =0;i< x;i++)
     {
-      cout << 
+      cout << a[i] << "\t";
     }
+    cout << "\n";
   }
