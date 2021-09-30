@@ -19,6 +19,10 @@ int main() {
   {
     int min,minidx;
     min = numbers[ith];
+    
+    // add this line
+    // minidx = ith;
+    
     for(int i =ith;i<N;i++)
     {
       if(min > numbers[i])
@@ -28,6 +32,10 @@ int main() {
       }
     }
     return ith;
+    
+    // You returned ith. I don't think it will work fine. The expected return value is the index of the min value.
+    // Fix this logical error and let me know .
+    
   }
 
   int printArray(int a[], int x)
