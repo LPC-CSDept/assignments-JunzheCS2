@@ -1,78 +1,64 @@
-#ifndef 	NUMBERS_H
-#define 	NUMBERS_H
-
-#include <iostream>
+#include "Numbers.hpp"
+#include<iostream>
 #include <cstdlib>
 using namespace std;
 
-// Need More time on get size and get Element.
-
-class Number
+numbers::numbers()
 {
+  *head = new int[10];
+}
 
-private:
-	int 	size;
-	int 	*ptr;
-public:
-	Number() : size(0), ptr(nullptr){};
-	Number(int s) 
-	{
-		size = s;
-		ptr = new int[size];
-	}
+numbers::numbers(int n)
+{
+  *head = new int[n];
+}
 
-	~Number()
-	{
-		delete [] ptr; 
-	}
+int numbers::getSize(int s) const{
+  return sizeof(head);
+}
 
-	int getSize() const (int size)
-	{	
-		return size;
-	}
+int numbers::getElement(int e)
+{
+  return head[e];
+}
 
-	int getElement(int i) const ()
-	{
+double numbers::getSum(double s) const{
+  double total = 0;
+  for(int i = 0;i<sizeof(head);i++)
+  {
+    int sum =0;
+    sum = head[i];
+    total = total + sum;
+  }
+  return total;
+}
 
-	
-	}
+double numbers::getAvg(double a) const{
+  double total = getSum();
+  int avg = 0;
+  avg = total/sizeof(head);
+  return avg;
+}
 
-	int getSum() const 
-	{
-		int sum=0;
-		for(int i=0;i<size; i++)
-			sum += *(ptr+i);
-		return sum;
-	}
+void numbers::setElements(int c, v)
+{
+  head[c] = v;
+}
 
-	int getAvg() const
-	{
-		int sum=0;
-		for(int i=0;i<size; i++)
-			sum += *(ptr+i);
-		return sum / size; 
-	}
+void numbers::bubbleSort(dessc:int){
+  for(int = 0;i<sizeof(head;i++)
+  {
+    for(int j=0;j<sizeof(head);j++)
+      swap(head[j],head[j+1]);
+  }
+}
 
-	void setElement(int i, int d)
-	{
-		*(ptr+i) = d ;
-	}
+void numbers::printNumbers(desc:int){
 
-	void setElement()
-	{
-		for(int i=0;i<size; i++)
-			*(ptr+i) = rand() % 100; 
-	}
 
-	void printOut () const 
-	{
-		for(int i=0;i<size; i++)
-		{
-			cout << *(ptr+i) << "\t ";
-		}
+  for(int i =0;i<sizeof(head);i++)
+  {
+    cout << head[i] << endl;
+  }
 
-		cout << endl;
-	}
-    
-};
-#endif
+}

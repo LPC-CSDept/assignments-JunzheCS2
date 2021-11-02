@@ -6,21 +6,19 @@ using namespace std;
 
 int main()
 {  
-	Number n(5);
+	numbers n(5);
 	n.setElement();
-	n.printOut();
+	n.printNumbers();
 
-  cout << "Sum " << n.getSum() << endl;
+    cout << "Sum " << n.getSum() << endl;
 	cout << "Size " << n.getSize() << endl;
 
-	Number N(10);
+	numbers N(10);
 
 	for( int i=0;i<10; i++)
     {
-		N.setElement(i,i*10);
+		N.setElement(c,v);
     }
 
-	N.printOut();
-
-  
+	N.printNumbers();
 }
