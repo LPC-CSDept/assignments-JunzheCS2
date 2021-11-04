@@ -1,7 +1,12 @@
 #ifndef NUMBERS_H
 #define NUMBERS_H
 
-class NUMBERS
+#inlcude<iostream>
+#include<vector>
+#include<cstdlib>
+using namespace std;
+
+class Numbers
 {
   private:
     int ID;
