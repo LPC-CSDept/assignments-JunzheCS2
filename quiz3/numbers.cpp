@@ -3,15 +3,14 @@
 #include<cstdlib>
 using namespace std;
 
-Numbers::numbers()
+Numbers::Numbers()
 {
   ID = -1;
 }
 
-Numbers::numbers(int id, int size)
+Numbers::Numbers(int id, int size)
 {
   ID = id;
-
   for(int i =0;i<size;i++)
   {
     numbers.push_back((rand()%99));
@@ -75,7 +74,7 @@ int Numbers::getSum() const
   return sum;
 }
 
-void deleteElm(int d)
+void Numbers::deleteElm(int d)
 {
   vector<int>::iterator i;
   for(i = numbers.begin();i < numbers.end();i++)
@@ -89,7 +88,7 @@ void deleteElm(int d)
 
 void Numbers::addElm(int a)
 {
-  numbers.push)back(a);
+  numbers.push_back(a);
 }
 
 void Numbers::printAll() const

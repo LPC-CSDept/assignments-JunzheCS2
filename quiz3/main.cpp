@@ -1,7 +1,5 @@
 #include "numbers.cpp"
-#include <cstdlib>
-#include<ctime>
-#include <iostream>
+
 using namespace std;
 
 int findMax(Numbers[], int);
@@ -15,7 +13,7 @@ int main()
 
   for(int i = 0;i<N;i++)
   {
-    cout << " Number Set ID " << numberset.getID() << "\t\n";
+    cout << " Number Set ID " << numberset[i].getID() << "\t\n";
     numberset[i].printAll();
   }
 
@@ -26,7 +24,7 @@ int main()
 
   deDup(numberset[2], numberset[3]);
   cout << " ID 3 - ID 4\n";
-  numberset[2].printALl();
+  numberset[2].printAll();
 
   deDup(numberset[0],numberset[1]);
   cout << "ID 1 - ID2\n";

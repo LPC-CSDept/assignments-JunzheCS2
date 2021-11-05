@@ -1,9 +1,8 @@
 #ifndef NUMBERS_H
 #define NUMBERS_H
 
-#inlcude<iostream>
 #include<vector>
-#include<cstdlib>
+#include<iostream>
 using namespace std;
 
 class Numbers
