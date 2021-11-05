@@ -20,8 +20,8 @@ class Numbers
     int getMax() const;
     int getMin() const;
     int getSum() const;
-    void deleteElm(int d);
-    void addElm(int a);
+    void deleteElm(int);
+    void addElm(int);
     void printAll() const;
 
 };
