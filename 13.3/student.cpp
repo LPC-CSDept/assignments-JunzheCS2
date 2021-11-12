@@ -1,91 +1,77 @@
 #include "student.hpp"
-#include <iostream>
-#include <string>
-#include <cstdlib>
 
-using namespace std;
+DOB::DOB(){
+  month = 1;
+  day = 1;
+}
 
-Student::student()
+DOB::DOB(int m, int d){
+  month = m;
+  day = d;
+}
+
+int DOB :: getMonth() const
 {
-  sname = " ";
+  return month;
+}
+
+int DOB :: getDay() const
+{
+  return day;
+}
+
+void DOB :: printDate()
+{
+  cout<<" DOB: " << month << "/" << day <<endl;
+}
+
+void DOB :: setDOB (int m, int d) 
+{
+  month = m;
+  day = d;
+}
+
+void DOB :: setMonth (int m) 
+{
+  month = m;
+}
+
+void DOB :: setDay(int d)
+{
+  day = d;
+}
+
+Student::Student(){
+  sname="";
   sid = 0;
-  dob;
+  DOB();
 }
 
-Student::student(string sn, int id,DOB date)
+int Student::getID() const
 {
-  sname = sn;
-  sid = id;
-  dob = date;
+return sid;
 }
 
-int Student::getSid() const{
-  return sid;
-}
-
-string Student::getSname() const{
+string Student::getSname() const
+{
   return sname;
 }
 
 DOB Student::getDOB() const
 {
-  return dob;
+ return dob;
 }
 
-void Student::setSname(string sn)
+void Student::setSname(string n)
 {
-  sname = sn;
+  sname = n;
 }
 
-void Student::setSid(int id)
+void Student::setID(int id)
 {
   sid = id;
 }
 
-void Student::setDOB(int date)
-{
-  dob = date;
-}
-
-DOB::DOB()
-{
-  month = 0;
-  day = 0;
-}
-
-DOB::DOB(int m, int d)
-{
-  month = m;
-  day = d;
-}
-
-int DOB:getMonth() const
-{
-  return month;
-}
-
-int DOB::getDay() const
-{
-  return day;
-}
-
-void DOB::printDate() const
-{
-  cout << " date of birth is : " << month << " " << day << endl;
-}
-
-void DOB::setDOB(int m, int d)
-{
-  month = m;
-  day = d;
-}
-
-void DOB::setMonth(int m)
-{
-  month = m;
-}
-
-void DOB::setDay(int d)
-{
-  day = d;
+void Student::setDOB(DOB d){
+  dob = d;
 }

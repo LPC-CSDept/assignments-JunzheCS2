@@ -1,43 +1,42 @@
 #ifndef STUDENT_H
 #define STUDENT_H
-#include<iostream>
-#include<string>
+
+#include <string>
+#include <iostream>
 
 using namespace std;
 
-class Student
-{
-  private:
-    int sid;
-    string sname;
-    DOB dob;
+class DOB{
+private:
+  int month;
+  int day;
 
-  public:
-    student();
-    student(string sn, int id, DOB date);
-    int getSid() const;
-    string getSname() const;
-    DOB getDOB() const;
-    void setSname(string sn);
-    void setSid(int id);
-    void setDOB(DOB date);
+public:
+  DOB();
+  DOB(int m, int d);
+  int getMonth() const;
+  int getDay() const;
+  void printDate();
+  void setDOB(int,int);
+  void setMonth(int);
+  void setDay(int);
 };
 
-class DOB
-{
-  private:
-    int month;
-    int day;
-  public:
-    DOB();
-    DOB(int m, int d);
-    int getMonth() const;
-    int getDay() const;
-    void printDate() const;
-    void setDOB(int m, int d);
-    void setMoneth(int m);
-    void setDay(int d);
-  
+class Student{
+private:
+ int sid;
+ string sname;
+ DOB dob;
+
+public:
+ Student();
+ Student(string,int,DOB);
+ int getID() const;
+ string getSname() const;
+ DOB getDOB() const;
+ void setSname(string);
+ void setID(int);
+ void setDOB(DOB);
 };
 
 #endif
