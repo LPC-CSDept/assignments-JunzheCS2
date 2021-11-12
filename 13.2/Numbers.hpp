@@ -11,14 +11,15 @@ class numbers
     numbers();
     numbers(int);
 
-    int getSize(int s) const;
+    int getSize() const;
     int getElement(int e) const;
-    double getSum(double s) const;
-    double getAvg(double a) const;
+    double getSum() const;
+    double getAvg() const;
     void setElement();
-    void setElement(int c, v);
-    void bubbleSort(dessc:int);
-    void printNumbers(desc:int);
-    clear();
-}
+    void setElement(int c, int e);
+    void bubbleSort(int desc);
+    void printNumbers(int desc);
+    void clear();
+};
+
 #endif

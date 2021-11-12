@@ -1,64 +1,87 @@
 #include "Numbers.hpp"
 #include<iostream>
 #include <cstdlib>
+
+
 using namespace std;
 
 numbers::numbers()
 {
-  *head = new int[10];
+  size = 10;
+  head = new int[10];
 }
 
 numbers::numbers(int n)
 {
-  *head = new int[n];
+  size = n;
+  head = new int[n];
 }
 
-int numbers::getSize(int s) const{
-  return sizeof(head);
+int numbers::getSize() const{
+  return size;
 }
 
-int numbers::getElement(int e)
+int numbers::getElement(int e) const
 {
   return head[e];
 }
 
-double numbers::getSum(double s) const{
+double numbers::getSum() const{
   double total = 0;
-  for(int i = 0;i<sizeof(head);i++)
+  for(int i = 0;i<size;i++)
   {
-    int sum =0;
-    sum = head[i];
-    total = total + sum;
+    total += head[i];
   }
   return total;
 }
 
-double numbers::getAvg(double a) const{
-  double total = getSum();
-  int avg = 0;
-  avg = total/sizeof(head);
-  return avg;
+double numbers::getAvg() const{
+  return getSum()/size;
 }
 
-void numbers::setElements(int c, v)
+void numbers::setElements(int c, int e)
 {
-  head[c] = v;
+  head[e] = c;
 }
 
-void numbers::bubbleSort(dessc:int){
-  for(int = 0;i<sizeof(head;i++)
-  {
-    for(int j=0;j<sizeof(head);j++)
-      swap(head[j],head[j+1]);
-  }
+void numbers::bubbleSort(int desc){
+  if (desc==0){
+    int i, j;
+        for (i = 0; i < size-1; i++)
+        {
+          for (j = 0; j < size-i-1; j++)
+              if (head[j] > head[j+1])
+                  swap(head[j], head[j+1]);
+        }
+    }
+    else{
+        int i, j;
+          for (i = 0; i < size-1; i++)
+          {
+          for (j = 0; j < size-i-1; j++)
+              if (head[j] < head[j+1])
+                  swap(head[j], head[j+1]);
+          }
+    }
 }
 
-void numbers::printNumbers(desc:int){
+void numbers::printNumbers(int desc){
 
 
-  for(int i =0;i<sizeof(head);i++)
-  {
-    cout << head[i] << endl;
-  }
+  if (desc==0){
+    for (int i=0; i<size; i++){
+        cout << head[i] << endl;
+      }
+    }
+    else{
+      for (int i=size-1; i>=0; i--){
+        cout << head[i] << endl;
+      }
+    }
 
+}
+
+void numbers::clear()
+{
+  delete[] head;
 }
