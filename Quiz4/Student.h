@@ -26,3 +26,4 @@ class Student
     void setScores(double);
   
 };
+#endif

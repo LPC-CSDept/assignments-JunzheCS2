@@ -68,3 +68,5 @@ void Course::addStudent(Student &s)
 {
   this->student.push_back(s);
 }
+
+void Course::printCourse(void){};

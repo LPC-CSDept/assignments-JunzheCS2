@@ -30,8 +30,9 @@ class Course
     void setCredits(int);
     void setSemester(string);
     void setStudent(vector<Student>);
-    void setCourse(string cname, int credits, string semester, vector<Student> student);
+    void setCourse(string,int,string,vector<Student>);
     void addStudent(Student &s);
+    void printCourse(void);
 
     friend ifstream &operator>>(ifstream &, Course &);
     friend ostream &operator>>(ostream &, Course &);
