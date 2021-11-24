@@ -6,6 +6,8 @@
 #include <vector>
 using namespace std;
 
+class Student;
+
 class Course
 {
   private:
@@ -16,16 +18,22 @@ class Course
     static int NUM_COURSES;
   public:
     Course();
-    Course(string, int, string, vector<Student>);
+    Course(string, int, string ,vector<Student>);
 
-    string getCname();
-    int getCredits();
-    string getSemester();
-    vector<Student> getStudent();
+    string getCname(void);
+    int getCredits(void);
+    string getSemester(void);
+    vector<Student> getStudent(void);
     static int getNumCourses();
 
-    void setCourse(string, int, string, vector<Student>);
+    void setCname(string);
+    void setCredits(int);
+    void setSemester(string);
+    void setStudent(vector<Student>);
+    
+    void setCourse(string cname, int credits, string semester, vector<Student> student);
     void addStudent(Student &s);
+    void printCourse(void);
 
     friend ifstream &operator>>(ifstream &, Course &);
     friend ostream &operator>>(ostream &, Course &);
