@@ -1,4 +1,6 @@
 #include "Student.h"
+#include <string>
+using namespace std;
 
 Student::Student()
 {
@@ -12,19 +14,19 @@ Student::Student(int ID, string sname, char grade, double scores)
   this->grade = grade;
   this->scores = scores;
 }
-int Student::getID()
+int Student::getID(void)
 {
   return ID;
 }
-string Student::getSname()
+string Student::getSname(void)
 {
   return sname;
 }
-char Student::getGrade()
+char Student::getGrade(void)
 {
   return grade;
 }
-double Student::getScores()
+double Student::getScores(void)
 {
   return scores;
 }

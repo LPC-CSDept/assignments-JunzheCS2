@@ -15,10 +15,10 @@ class Student
   public:
     Student();
     Student(int, string, char, double);
-    int getID();
-    string getSname();
-    char getGrade();
-    double getScores();
+    int getID(void);
+    string getSname(void);
+    char getGrade(void);
+    double getScores(void);
 
     void setID(int);
     void setSname(string);

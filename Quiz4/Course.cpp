@@ -1,4 +1,10 @@
 #include "Course.h"
+#include "Student.h"
+#include <string>
+#include <cstring>
+#include <vector>
+#include <iostream>
+using namespace std;
 
 int Course::NUM_COURSES=0;
 
@@ -14,23 +20,23 @@ Course::Course(string cname, int credits, string semester, vector<Student> stude
   this->student=student;
   NUM_COURSES+=1;
 }
-string Course::getCname()
+string Course::getCname(void)
 {
   return cname;
 }
-int Course::getCredits()
+int Course::getCredits(void)
 {
   return credits;
 }
-string Course::getSemester()
+string Course::getSemester(void)
 {
   return semester;
 }
-vector<Student> Course::getStudent()
+vector<Student> Course::getStudent(void)
 {
   return student;
 }
-int Course::getNumCourses()
+int Course::getNumCourses(void)
 {
   return NUM_COURSES;
 }

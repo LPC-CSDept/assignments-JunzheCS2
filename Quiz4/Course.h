@@ -20,10 +20,10 @@ class Course
     Course();
     Course(string, int, string ,vector<Student>);
 
-    string getCname();
-    int getCredits();
-    string getSemester();
-    vector<Student> getStudent();
+    string getCname(void);
+    int getCredits(void);
+    string getSemester(void);
+    vector<Student> getStudent(void);
     static int getNumCourses();
 
     void setCname(string);
