@@ -18,7 +18,7 @@ class Student
     int getID();
     string getSname();
     char getGrade();
-    int getScores();
+    double getScores();
 
     void setID(int);
     void setSname(string);
