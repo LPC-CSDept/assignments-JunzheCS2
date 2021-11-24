@@ -1,24 +1,26 @@
 #ifndef NUMBERS_H
 #define NUMBERS_H
 
-#include<iostream>
+#include <iostream>
+
 using namespace std;
 
 class Numbers
 {
   private:
-    int size;
-    int *numbers;
-
+  int size;
+  int *numbers;
   public:
-    Numbers();
-    Numbers(int s);
-    Numbers(const Numbers &);
-    ~Numbers();
-    int operator>(const Numbers &n);
-    Numbers operator=(const Numbers &n);
-    Numbers operator+(const Numbers &n);
-    friend void printNumbers(const Numbers& n);
-    friend ostream &operator<<(ostream &, const Numbers &);
-    friend istream &operator>>(istream &, const Numbers &);
+  Numbers();
+  Numbers(int);
+  Numbers(const Numbers &);
+  ~Numbers();
+  int operator>(const Numbers &);
+  Numbers operator=(const Numbers &);
+  Numbers operator+(const Numbers &);
+  friend void printNumbers(Numbers);
+  friend ostream &operator << (ostream &, const Numbers &);
+  friend istream &operator >> (istream &, const Numbers &);
 };
+
+#endif
