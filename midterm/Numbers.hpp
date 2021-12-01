@@ -6,6 +6,8 @@
 
 using namespace std;
 
+template<typename T>
+
 class Numbers
 {
   private:
@@ -28,6 +30,21 @@ class Numbers
         int n = (rand()%99+1);
         values.push_back(k);
       }
+    }
+
+    int getId()
+    {
+      return this->id;
+    }
+
+    void setId(int id)
+    {
+      Numbers::id = id;
+    }
+
+    const vector<int> &getValues() const
+    {
+      return values;
     }
 
     
