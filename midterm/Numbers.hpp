@@ -47,6 +47,27 @@ class Numbers
       return values;
     }
 
+    void setValues(const vecot<int> &values)
+    {
+      Numbers::values = values;
+    }
+
+    friend void printNumbers(Numbers);
+
+    bool operator>(Numbers<int> *n)
+    {
+      int c = 0;
+      for(int i=0;i< n->values.size();i++)
+      {
+        c += this->values[i];
+      }
+      int c1 = 0;
+      for(int i=0;i< n->values.size();i++)
+      {
+        c1 += n->values[i];
+      }
+      return c > c1;
+    }
     
 
 };
