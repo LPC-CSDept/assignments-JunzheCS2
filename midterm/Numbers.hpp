@@ -15,8 +15,23 @@ class Numbers
   public:
     Numbers()
     {
-      ID = 0;
+      this->id = 0;
+      this->values = {};
       numOfObjects++;
     }
+    Numbers(int i, int n)
+    {
+      this->id = i;
+      this->numOfObjects++;
+      for(int i=0;i<n;i++)
+      {
+        int n = (rand()%99+1);
+        values.push_back(k);
+      }
+    }
 
-}
+    
+
+};
+
+#endif
