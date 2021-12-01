@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 using namespace std;
 
 class Student
@@ -74,9 +75,29 @@ class Student
     {
       return score3;
     }
-
-
-    
-
 };
+
+void searchId(int id, vector<Student *> vector1)
+{
+  for(int i=0;i<vector1.size();i++)
+  {
+    if(vector1[i]->getId()==id)
+    {
+      cout << " student Found " <<endl;
+      cout << vector1[i]->getId()<<endl;
+      cout << vector1[i]->getName()<<endl;
+      cout << vector1[i]->getScore1()<<endl;
+      cout << vector1[i]->getScore2()<<endl;
+      cout << vector1[i]->getScore3()<<endl;
+      return;
+    }
+  }
+  cout << "Not Found"<<endl;
+}
+
+bool compare(Student* s1, Student* s2)
+{
+  return s1->getScore1() + s1->getScore2() + s1->getScore3() > s2->getScore1() + s2->getScore2() + s2->getScore3();
+}
+
 #endif
