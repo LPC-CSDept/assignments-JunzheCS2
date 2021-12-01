@@ -50,6 +50,12 @@ int main()
           i++;
         }
       }
+    Student *s = new Student(id, name,score1,score2,score3);
+    arr.push_back(s);
     }
+    file.close();
   }
+
+  
+
 }
