@@ -1,3 +1,5 @@
+#ifndef STUDENT_H
+#define STUDENT_H
 #include <iostream>
 #include <fstream>
 #include <vector>

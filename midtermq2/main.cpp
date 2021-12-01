@@ -56,6 +56,18 @@ int main()
     file.close();
   }
 
-  
+  else cout << " unable to open the file " <<endl;
 
+  sort(arr.begin(),arr.end(),compare);
+
+  for(int i=0;i<arr.size();i++)
+  {
+    cout << arr[i]->getId()<<" " << arr[i]->getName() << " " << arr[i]->getScore1() << " " << arr[i]->getScore2() << " " << arr[i]->getScore3() << endl;
+  }
+
+  int id;
+  cout << " please enter the id " <<endl;
+  cin >> id;
+  searchId(id,arr);
+  return 0;
 }
