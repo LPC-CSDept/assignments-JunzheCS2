@@ -11,64 +11,64 @@ template<typename T>
 class Numbers
 {
   private:
-    int ID;
-    vector<int>values;
-    static in numOfObjects;
+    int id;
+    vector<int> values;
+    int numOfObjects;
   public:
-    Numbers()
+    Numbers() 
     {
       this->id = 0;
       this->values = {};
       numOfObjects++;
     }
-    Numbers(int i, int n)
+    Numbers(int i, int n) 
     {
       this->id = i;
       this->numOfObjects++;
-      for(int i=0;i<n;i++)
+      for (int i=0;i<n; i++) 
       {
         int n = (rand()%99+1);
-        values.push_back(k);
+        values.push_back(n);
       }
     }
 
-    int getId()
+    int getId() 
     {
       return this->id;
     }
 
-    void setId(int id)
+    void setId(int id) 
     {
       Numbers::id = id;
     }
 
-    const vector<int> &getValues() const
+    const vector<int> &getValues() const 
     {
       return values;
     }
 
-    void setValues(const vecot<int> &values)
+    void setValues(const vector<int> &values) 
     {
       Numbers::values = values;
     }
 
     friend void printNumbers(Numbers);
 
-    bool operator>(Numbers<int> *n)
+    bool operator>(Numbers<int> *n) 
     {
       int c = 0;
-      for(int i=0;i< n->values.size();i++)
+      for (int i = 0; i < this->values.size(); i++) 
       {
         c += this->values[i];
       }
       int c1 = 0;
-      for(int i=0;i< n->values.size();i++)
+      for (int i = 0; i < n->values.size(); i++) 
       {
         c1 += n->values[i];
       }
-      return c > c1;
+        return c > c1;
     }
-    
+
 
 };
 
