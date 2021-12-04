@@ -13,7 +13,7 @@ private:
 
 public:
   DOB();
-  DOB(int m, int d);
+  DOB(int , int );
   int getMonth() const;
   int getDay() const;
   void printDate();

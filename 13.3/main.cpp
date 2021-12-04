@@ -1,60 +1,40 @@
 #include "student.hpp"
 #include <fstream>
 
-void makeStudent(Student s[], int N);
-void sortStudent(Student s[], int N);
 void printStudent(Student s[], int N);
 
 int main()
 {
-const int N = 10;
-Student s[N];
-makeStudent(s,N);
-sortStudent(s,N);
-printStudent(s,N);
-}
-
-void makeStudent(Student s[],int N){
-  string sname;
-  int id, month, day;
-  DOB date;
   ifstream file;
-  file.open("studentsDOB.txt");
-  if (file.fail())
-	{
-		cerr << "File Open Error\n";
-		exit(0);
-	}
+  const int N = 10;
+  Student s[N];
+  string name;
+  int ID;
+  int month;
+  int day;
+  DOB date;
 
-	for(int i=0;i<N;i++)
-	{
-		file >> sname >> id >> month >> day;
-    date.setDOB(month,day);
-    s[i].setSname(sname);
-    s[i].setID(id);
-    s[i].setDOB(date);
+  file.open("students.txt");
+  if(file.fail())
+  {
+    cerr << " error. " << endl;
+    exit(0);
   }
+
+  int i=0;
+  while(file>>name>>ID>>month>>day) // followed your instructions that changes to while loop instead of for loop, create an integer i and i++ in the while loop to set the value.
+  {
+    
+    date.setDOB(month,day);
+    s[i].setSname(name);
+    s[i].setID(ID);
+    s[i].setDOB(date);
+    i++;
+  }
+  
+  printStudent(s,N);
+
 }
-
-
-void sortStudent(Student s[], int N){
-int i;
-int j;
- for(i=0;i<N-1; i++)
-    for(j=0;j < N-i-1; j++){
-      if (s[j].getDOB().getMonth()> s[j+1].getDOB().getMonth())
-      {
-        swap(s[j], s[j+1]);  
-      }
-      else if (s[j].getDOB().getMonth() == s[j+1].getDOB().getMonth()) 
-      
-      if(s[j].getDOB().getDay() > s[j+1].getDOB().getDay()) 
-      {
-        swap(s[j], s[j+1]);  
-      }
-      }
-}
-
 
 void printStudent(Student s[], int N)
 {

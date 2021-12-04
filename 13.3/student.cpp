@@ -1,4 +1,6 @@
 #include "student.hpp"
+#include <iostream>
+using namespace std;
 
 DOB::DOB(){
   month = 1;
@@ -42,7 +44,7 @@ void DOB :: setDay(int d)
 }
 
 Student::Student(){
-  sname="";
+  sname=" ";
   sid = 0;
   DOB();
 }
