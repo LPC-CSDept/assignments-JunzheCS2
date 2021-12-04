@@ -38,10 +38,16 @@ double numbers::getSum() const{
 double numbers::getAvg() const{
   return getSum()/size;
 }
-
-void numbers::setElements(int c, int e)
+void numbers::setElement() //forget this
 {
-  head[e] = c;
+  for(int i=0;i<size;i++)
+  {
+    head[i] = rand()%99; //forget to set the value
+  }
+}
+void numbers::setElement(int v, int i)
+{
+  head[v] = i; // i should be the index
 }
 
 void numbers::bubbleSort(int desc){

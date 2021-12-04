@@ -1,5 +1,7 @@
 #ifndef NUMBERS_H
 #define NUMBERS_H
+#include <iostream>
+#include <cstdlib>
 using namespace std;
 
 class numbers
@@ -12,13 +14,13 @@ class numbers
     numbers(int);
 
     int getSize() const;
-    int getElement(int e) const;
+    int getElement(int) const;
     double getSum() const;
     double getAvg() const;
     void setElement();
-    void setElement(int c, int e);
-    void bubbleSort(int desc);
-    void printNumbers(int desc);
+    void setElement(int, int);
+    void bubbleSort(int);
+    void printNumbers(int);
     void clear();
 };
 
