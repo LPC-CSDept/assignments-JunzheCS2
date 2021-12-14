@@ -40,7 +40,7 @@ int main()
   int size = 7;
   int s = 0;
   int e = size -1;
-  int arr[7] = {1,8,5,9,4,3,7};
+  int arr[7] = {1,8,5,9,4,3,7}; // or arr[size]
 
 
   cout << " before sort : " << endl;
