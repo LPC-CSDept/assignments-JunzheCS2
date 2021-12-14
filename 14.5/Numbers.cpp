@@ -4,16 +4,16 @@ using namespace std;
 Numbers::Numbers()
 {
   size=0;
-  numbers=NULL;
+  numbers=NULL;  // constructor set original values
 }
-Numbers::Numbers(int s)
+Numbers::Numbers(int n)
 {
   size = 10;
-  numbers = new int[size];
+  numbers = new int[size]; //give the values
 
   for(int i = 0; i<size; i++)
   {
-    numbers[i] = rand() % 100;
+    numbers[i] = rand() % 100; // random values by for loop
   }
 }
 
@@ -31,7 +31,7 @@ Numbers::Numbers(const Numbers& n)
 Numbers::~Numbers()
 {
   size = 0;
-  delete[] numbers;
+  delete[] numbers; // destructor
 }
 
 int Numbers::operator > (const Numbers &n){

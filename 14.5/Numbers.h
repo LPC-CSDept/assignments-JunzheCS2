@@ -8,11 +8,11 @@ class Numbers
 {
   private:
     int size;
-    int *numbers;
+    int * numbers;
 
   public:
     Numbers();
-    Numbers(int s);
+    Numbers(int n);
     Numbers(const Numbers &);
     ~Numbers();
     int operator>(const Numbers &n);
@@ -20,3 +20,4 @@ class Numbers
     Numbers operator+(const Numbers &n);
     friend void printNumbers(const Numbers& n);
 };
+#endif //forget to add this
