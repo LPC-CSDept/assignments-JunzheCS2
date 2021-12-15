@@ -23,4 +23,9 @@ class Course // create a course by class
       courseName = name;
       grade = Grade; // paramaterized constructor
     }
+
+    int getCourseID() const
+    {
+      return courseID;
+    }
 }
