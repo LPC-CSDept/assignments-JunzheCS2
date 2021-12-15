@@ -1,5 +1,28 @@
 #include "Course.hpp"
 
+// Binary search
+bool binarySearch(Course *c, int s, int e, int id)
+{ 
+  int mid = 0;
+  if(s < e)
+  {
+    mid = (s+e)/2;
+    if(c[mid].getCourseID() == id)
+    {
+      return true;
+    }
+    else if(c[mid].getCourseID() > id)
+    {
+      e = mid;
+    }
+    else
+    {
+      s = mid + 1;
+    }
+    return binarySearch(c,s,e,id);
+  }
+  
+}
 int main()
 {
   Course courses[10];
@@ -39,7 +62,8 @@ int main()
   courses[8].setCourseName("Jack");
   courses[8].setGrade(80);
 
-  courses[8].setCourseID(10007773);
-  courses[8].setCourseName("Zack");
-  courses[8].setGrade(90);
+  courses[9].setCourseID(10007773);
+  courses[9].setCourseName("Zack");
+  courses[9].setGrade(90);
+  // storing 10 objects, I chose the most simple way to do it.
 }
