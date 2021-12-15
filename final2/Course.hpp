@@ -1,0 +1,36 @@
+#ifndef #COURSE_H
+#define #COURSE_H
+
+#include <iostream>
+using namespace std;
+
+class Course // create a course class
+{
+  private: // private
+    int courseID;
+    string courseName;
+    int grade;
+  public: // public
+    Course() // constructor
+    {
+      courseID = 0;
+      courseName = " ";
+      grade = 0;
+    }
+
+    Course(int id, string cname, int grade)
+    {
+      courseID = id;
+      courseName = cname;
+      grade = grade;
+    } // paramaterize constructor
+
+    //getters and setters
+
+    int getCourseID()
+    {
+      return courseID;
+    }
+
+    void setCourseID(int courseID)
+}
