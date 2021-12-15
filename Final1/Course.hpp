@@ -1,6 +1,8 @@
 #ifndef COURSE_H
 #define COURSE_H
 #include <iostream>
+#include <algorithm>
+#include <fstream>
 using namespace std;
 
 class Course // create a course by class
@@ -30,24 +32,24 @@ class Course // create a course by class
       return courseID;
     }
 
-    String getCourseName()
+    string getCourseName() const
     {
       return courseName;
     }
 
-    int getGrade()
+    int getGrade()const
     {
       return grade;
     }
 
-    void setCourseID(int cID)
+    void setCourseID(int courseID)
     {
-      this ->cID = cID;
+      this ->courseID = courseID;
     }
 
-    void setCourseName(string cname)
+    void setCourseName(string courseName)
     {
-      this->cname = cname;
+      this->courseName = courseName;
     }
 
     void setGrade(int grade)
@@ -55,9 +57,10 @@ class Course // create a course by class
       this->grade = grade;
     }
     
-    bool operator<(Course &c)
+    bool operator<(Course &c) const
     {
-      return this->c < c.courseID;
+      return this->courseID < c.courseID;
     }
 };
+#endif
 

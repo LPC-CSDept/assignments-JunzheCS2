@@ -21,7 +21,7 @@ bool binarySearch(Course *c, int s, int e, int id)
     }
     return binarySearch(c,s,e,id);
   }
-  
+  return false;
 }
 
 int main()
@@ -73,31 +73,31 @@ int main()
   if(binarySearch(courses, 0 , 10,10007773))
     cout << " 10007773 is found " << endl;
   else
-    cout << " it is not found " << endl;
+    cout << " 10007773 not found " << endl;
   cout << endl;
 
   if(binarySearch(courses, 0 , 10,10001111))
     cout << " 10001111 is found " << endl;
   else
-    cout << " it is not found " << endl;
+    cout << " 10001111 not found " << endl;
   cout << endl;
 
   if(binarySearch(courses, 0 , 10,10007772))
     cout << " 10007772 is found " << endl;
   else
-    cout << " it is not found " << endl;
+    cout << " 10007772 not found " << endl;
   cout << endl;
 
   if(binarySearch(courses, 0 , 10,10009999))
     cout << " 10009999 is found " << endl;
   else
-    cout << " it is not found " << endl;
+    cout << " 10009999 not found " << endl;
   cout << endl;
 
   if(binarySearch(courses, 0 , 10,10002687))
     cout << " 10002687 is found " << endl;
   else
-    cout << " it is not found " << endl;
+    cout << " 10002687 not found " << endl;
   cout << endl;
 
   return 0;
