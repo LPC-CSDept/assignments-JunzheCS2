@@ -11,8 +11,8 @@ class Numbers
     int ID;
     vector<int> numbers;
   public:
-    numbers();
-    numbers(int,int);
+    Numbers();
+    Numbers(int,int);
     int getID() const;
     int getSize() const;
     int getElm(int i) const;

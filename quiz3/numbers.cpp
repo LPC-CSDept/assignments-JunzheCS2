@@ -77,12 +77,9 @@ int Numbers::getSum() const
 void Numbers::deleteElm(int d)
 {
   vector<int>::iterator i;
-  for(i = numbers.begin();i < numbers.end();i++)
+  for(int i=0;i<numbers.size();i++)  // do not think my previous way was going to work, so I changed to a easier way. Use .erase to erase the elements in a foor loop.
   {
-    if(*i == d)
-    {
-      numbers.erase(i--);
-    }
+    numbers.erase(numbers.begin() + i);
   }
 }
 

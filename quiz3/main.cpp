@@ -1,4 +1,4 @@
-#include "numbers.cpp"
+#include "numbers.hpp"
 #include<cstdlib>
 #include<ctime>
 
@@ -29,6 +29,33 @@ int main()
   numberset[2].printAll();
 
   deDup(numberset[0],numberset[1]);
-  cout << "ID 1 - ID2\n";
+  cout << "ID 1 - ID 2\n";
   numberset[0].printAll();
+}
+
+int findMax(Numbers n[], int size) // add findmax with n[] and size, set the different value to 0 and create 2 integers. I used the for loop to get the max difference then compare the values between max and diff. If max > diff then diff = max. 
+{
+  int diff = 0;
+  int ID;
+  int max;
+
+  for(int i = 0; i < size; i++)
+  {
+    max = n[i].getMax() - n[i].getMin();
+
+    if(max > diff)
+    {
+      diff = max;
+      ID = n[i].getID();
+    }
+  }
+  return ID;
+}
+
+void deDup(Numbers &n1, Numbers &n2) // add dedup. This one is easier to set up, a for loop through the deleteElm. Still not sure why ID3 - ID4 not showing.
+{
+  for(int i=0;i<n2.getSize(); i++)
+  {
+    n1.deleteElm(n2.getElm(i));
+  }
 }
