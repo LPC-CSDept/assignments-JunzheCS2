@@ -23,6 +23,7 @@ bool binarySearch(Course *c, int s, int e, int id)
   }
   
 }
+
 int main()
 {
   Course courses[10];
@@ -66,4 +67,39 @@ int main()
   courses[9].setCourseName("Zack");
   courses[9].setGrade(90);
   // storing 10 objects, I chose the most simple way to do it.
+
+  //test binary search
+  if(binarySearch(courses, 0 , 10,10007773))
+    cout << " 10007773 is found " << endl;
+  else
+    cout << " it is not found " << endl;
+  cout << endl;
+
+  if(binarySearch(courses, 0 , 10,10007773))
+    cout << " 10007773 is found " << endl;
+  else
+    cout << " it is not found " << endl;
+  cout << endl;
+
+  if(binarySearch(courses, 0 , 10,10007773))
+    cout << " 10007773 is found " << endl;
+  else
+    cout << " it is not found " << endl;
+  cout << endl;
+
+  if(binarySearch(courses, 0 , 10,10007773))
+    cout << " 10007773 is found " << endl;
+  else
+    cout << " it is not found " << endl;
+  cout << endl;
+
+  if(binarySearch(courses, 0 , 10,10007773))
+    cout << " 10007773 is found " << endl;
+  else
+    cout << " it is not found " << endl;
+  cout << endl;
+
+  return 0;
+  
+
 }
