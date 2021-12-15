@@ -7,7 +7,7 @@ using namespace std;
 class stack
 {
   private: 
-    vector<T>pool;
+    vector<int>pool;
   public:
     stack();
     stack(int);

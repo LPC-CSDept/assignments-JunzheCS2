@@ -2,7 +2,7 @@
 using namespace std;
 stack::stack()
 {
-  pool.reserve(10);
+  pool.reserve(0);
 }
 
 stack::stack(int n)
