@@ -1,106 +1,61 @@
-#include <iostream>
-#include "Student.h"
-#include "Course.h"
 #include <fstream>
-#include <cstring>
-#include <iomanip>
-
+#include <iostream>
+#include "Course.hpp"
 using namespace std;
 
-int main()
-{
-  int N = 4;
-  Course course[N];
-  ifstream file;
-
-  file.open("coursestudents.txt");
-  if(file.fail())
-  {
-    cout << "File can not be opened" << endl;
-    exit(0);
+int Course::NUM_COURSES;
+int main(int a, char const *ar[]) {
+  // create an object 
+  ifstream ifs;
+  // oepn file
+  ifs.open("coursestudents.txt");
+  Course::NUM_COURSES = 0;
+  Course courses[4];
+  // initialize the courses.
+  for (int i = 0; i < Course::getNumberOfCourses(); i++) {
+    ifs >> courses[i];
   }
-  for(int i = 0; i<N; i++)
-  {
-    file >> course[i];
-    cout << course[i] << endl;
-  }
-  file.close();
+  // close the file.
+  ifs.close();
 
-  file.open("addstudents.txt");
-  if(file.fail())
-  {
-    cout << "File can not be opened" << endl;
-    exit(0);
-  }
+  ifs.open("addstudents.txt");
+  string cid;
+  int numStudents;
+  int ID;
+  string sname;
+  char grade;
+  double scores;
+  int i;
 
-  string CID;
-  while (file >> CID)
-  {
-    int index;
-    for(int i = 0; i < Course::getNumCourses(); i++)
-    {
-      if(course[i].getCname() == CID)
-      {
-        index = i;
+  // while loop
+  while (!ifs.eof()) {
+    ifs >> cid;
+    ifs >> numStudents;
+    for (i = 0; i < Course::getNumberOfCourses(); i++) {
+      if (courses[i].getCname() == cid) {
+        break;
       }
     }
-  int studentN;
-  file >> studentN;
-
-    for(int i = 0; i < studentN; i++)
-    {
-      int ID;
-      string sname;
-      char grade;
-      double scores;
-      file >> ID >> sname >> grade >> scores;
-      Student s(ID, sname, grade, scores);
-      course[CID].addStudent(s);
+    if (i < 4 && !ifs.eof()) {
+      while (numStudents > 0) {
+        Student sObj;
+        ifs >> ID >> sname >> grade >> scores;
+        sObj.setStudent(ID, sname, grade, scores);
+        courses[i].addStudent(sObj);
+        numStudents--;
+      }
+      cout << "Updated Students list for the Course " << cid << endl;
     }
-
-    cout << "Student list: " << endl;
-    cout << course[CID] << endl;
   }
-  file.close();
 
-  for(int i = 0; i<Course::getNumCourses(); i++)
-  {
-    cout << course[i] << endl;
+  // Display the udpated course list.
+  cout << "\nUpdated list";
+  cout << "\n------------";
+  for (i = 0; i < Course::getNumberOfCourses(); i++) {
+    cout << courses[i];
   }
+
+  return 0;
 }
 
-ifstream &operator>>(ifstream &ifs, Course &c)
-{
-  string cname;
-  int credits;
-  string semester;
-  ifs >> cname >> credits >> semester;
-
-  int studentN;
-  ifs >> studentN;
-
-  vector<Student> students;
-  for(int i = 0; i<studentN; i++)
-  {
-    int ID;
-    string sname;
-    char grade;
-    double scores;
-    ifs >> ID >> sname >> grade >> scores;
-    Student s = Student(ID, sname, grade, scores);
-    students.push_back(s);
-  }
-  c.setCourse(cname, credits, semester, students);
-}
-
-ostream &operator<<(ostream &os, Course &c)
-{
-  os << c.getCname() << "\t" << c.getCredits() << "\t" ;
-  os << "StudentID\tcredit\tGrade\tScore\t" << endl;
-
-  for(int i = 0; i<c.getStudent().size(); i++)
-  {
-    os << c.getStudent()[i].getID() << endl << c.getStudent()[i].getSname() << endl << c.getStudent()[i].getGrade() << endl << c.getStudent()[i].getScores() << endl ;
-  }
-  os << endl;
-}
+// I did it all over again, I combined cpp and hpp into hpp. Thought that would be easy to set up, student hpp is easier to do but in course hpp, I was stuck at the friend overaloading system, because I tried to read the read the data values in hpp then in main function was easy to set up too, read the file then with a while loop. 
