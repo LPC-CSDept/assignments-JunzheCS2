@@ -28,4 +28,30 @@ class Course // create a course by class
     {
       return courseID;
     }
+
+    String getCourseName()
+    {
+      return courseName;
+    }
+
+    int getGrade()
+    {
+      return grade;
+    }
+
+    void setCourseID(int cID)
+    {
+      this ->cID = cID;
+    }
+
+    void setCourseName(string cname)
+    {
+      this->cname = cname;
+    }
+
+    void setGrade(int grade)
+    {
+      this->grade = grade;
+    }
+    
 }
