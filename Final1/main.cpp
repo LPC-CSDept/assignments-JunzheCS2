@@ -66,6 +66,7 @@ int main()
   courses[9].setCourseID(10007773);
   courses[9].setCourseName("Zack");
   courses[9].setGrade(90);
+  sort(courses, courses + 10);
   // storing 10 objects, I chose the most simple way to do it.
 
   //test binary search
@@ -75,26 +76,26 @@ int main()
     cout << " it is not found " << endl;
   cout << endl;
 
-  if(binarySearch(courses, 0 , 10,10007773))
-    cout << " 10007773 is found " << endl;
+  if(binarySearch(courses, 0 , 10,10001111))
+    cout << " 10001111 is found " << endl;
   else
     cout << " it is not found " << endl;
   cout << endl;
 
-  if(binarySearch(courses, 0 , 10,10007773))
-    cout << " 10007773 is found " << endl;
+  if(binarySearch(courses, 0 , 10,10007772))
+    cout << " 10007772 is found " << endl;
   else
     cout << " it is not found " << endl;
   cout << endl;
 
-  if(binarySearch(courses, 0 , 10,10007773))
-    cout << " 10007773 is found " << endl;
+  if(binarySearch(courses, 0 , 10,10009999))
+    cout << " 10009999 is found " << endl;
   else
     cout << " it is not found " << endl;
   cout << endl;
 
-  if(binarySearch(courses, 0 , 10,10007773))
-    cout << " 10007773 is found " << endl;
+  if(binarySearch(courses, 0 , 10,10002687))
+    cout << " 10002687 is found " << endl;
   else
     cout << " it is not found " << endl;
   cout << endl;
