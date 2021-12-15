@@ -5,16 +5,16 @@
 #include <vector>
 using namespace std;
 
-class Student
+class Student // create this student class
 {
-  private:
+  private:  //private variables
     int id;
     string name;
     int score1;
     int score2;
     int score3;
-  public:
-    Student()
+  public:  // public variables
+    Student() //consstructor
     {
       id = 0;
       name = " NONE ";
@@ -27,7 +27,7 @@ class Student
       this->score2 = score2;
       this->score3 = score3;
     }
-
+// getters and setters
     void setId(int id)
     {
       Student::id = id;
@@ -100,6 +100,6 @@ void searchId(int id, vector<Student *> vector1)
 bool compare(Student* s1, Student* s2)
 {
   return s1->getScore1() + s1->getScore2() + s1->getScore3() > s2->getScore1() + s2->getScore2() + s2->getScore3();
-}
+} // compare method helps to sort the students in order
 
 #endif

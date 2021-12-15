@@ -5,13 +5,14 @@ void printNumbers(Numbers<int> *);
 
 int main() 
 {
-  srand(time(NULL));
+  srand(time(NULL)); // random numbers
+  // set radom numbers in *n1 and *n2
   Numbers<int> *n1 = new Numbers<int>(1, 10);
   Numbers<int> *n2 = new Numbers<int>(2, 10);
-  printNumbers(n1);
+  printNumbers(n1); //print all random data
   printNumbers(n2);
 
-  bool l = n1->operator>(n2);
+  bool l = n1->operator>(n2); // use bool to compare and return 1/0
 
   if (l) 
   {
@@ -24,7 +25,7 @@ int main()
   return 0;
 }
 
-void printNumbers(Numbers<int> *pNumbers) 
+void printNumbers(Numbers<int> *pNumbers) // print all
 {
   cout << "Values: ";
   for (int i=0; i< pNumbers->getValues().size(); i++)

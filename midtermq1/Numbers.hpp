@@ -8,14 +8,14 @@ using namespace std;
 
 template<typename T>
 
-class Numbers
+class Numbers // create numbers class
 {
-  private:
+  private: // private varables
     int id;
     vector<int> values;
     int numOfObjects;
-  public:
-    Numbers() 
+  public:  // public varables
+    Numbers() // constructor
     {
       this->id = 0;
       this->values = {};
@@ -31,7 +31,7 @@ class Numbers
         values.push_back(n);
       }
     }
-
+  // getters and setters
     int getId() 
     {
       return this->id;
@@ -52,9 +52,9 @@ class Numbers
       Numbers::values = values;
     }
 
-    friend void printNumbers(Numbers);
+    friend void printNumbers(Numbers); // declare this friend void in hpp.
 
-    bool operator>(Numbers<int> *n) 
+    bool operator>(Numbers<int> *n)
     {
       int c = 0;
       for (int i = 0; i < this->values.size(); i++) 

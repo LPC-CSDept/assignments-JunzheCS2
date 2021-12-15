@@ -8,7 +8,7 @@ int main()
 {
   vector<Student*> arr;
   string line;
-  ifstream file("student.txt");
+  ifstream file("student.txt"); // read the file
   if(file.is_open())
   {
     while(getline(file,line))
@@ -22,7 +22,7 @@ int main()
       int score2 = 0;
       int score3 = 0;
       string temp;
-      while(is >> temp)
+      while(is >> temp) // while loop 
       {
         if(i==0)
         {
@@ -50,10 +50,10 @@ int main()
           i++;
         }
       }
-    Student *s = new Student(id, name,score1,score2,score3);
-    arr.push_back(s);
+    Student *s = new Student(id, name,score1,score2,score3); // create a student object and add it to the vector
+    arr.push_back(s); 
     }
-    file.close();
+    file.close(); // close the file
   }
 
   else cout << " unable to open the file " <<endl;
@@ -65,9 +65,9 @@ int main()
     cout << arr[i]->getId()<<" " << arr[i]->getName() << " " << arr[i]->getScore1() << " " << arr[i]->getScore2() << " " << arr[i]->getScore3() << endl;
   }
 
-  int id;
+  int id; // create a user input
   cout << " please enter the id " <<endl;
-  cin >> id;
+  cin >> id; // ask for user input 
   searchId(id,arr);
   return 0;
 }
