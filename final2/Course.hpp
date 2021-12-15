@@ -63,7 +63,33 @@ class Course // create a course class
     }
 };
 
-void printCourses(Course *c, int size);
-void swapCourses(Course *c1, Course *c2);
+void printCourses(Course *c, int size) // print the course
+{
+  for(int i=0;i<size;i++)
+  {
+    cout << c[i].getCourseID() << " " << c[i].getCourseName() << " " << c[i].getGrade() << " \n ";
+    cout << endl;
+  }
+}
+void swapCourses(Course *c1, Course *c2); // swap 2 course
+{
+  Course temp = *c1;
+  *c1 = *c2;
+  *c2 = temp;
+}
 int partition(Course *c, int s, int e);
+{
+  int pivot = course[e].getCourseID(); // pivot value is the last
+  int i = (s - 1);
+  for(int j=s;j<e;j++)
+  {
+    if(c[j].getCourseID()<=pivot)
+    {
+      i++;
+      swapCourses(&c[i], &c[j]);
+    }
+  }
+  swapCourses(&c[i+1], &c[e]);
+  return i+1;
+}
 void quickSort(Course *c, int s, int e);
