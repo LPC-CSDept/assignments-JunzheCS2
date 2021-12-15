@@ -24,6 +24,7 @@ class Course // create a course by class
       grade = Grade; // paramaterized constructor
     }
 
+    // getters and setters
     int getCourseID() const
     {
       return courseID;
@@ -54,4 +55,9 @@ class Course // create a course by class
       this->grade = grade;
     }
     
-}
+    bool operator<(Course &c)
+    {
+      return this->c < c.courseID;
+    }
+};
+
