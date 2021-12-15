@@ -44,4 +44,15 @@ int main()
   courses[9].setCourseID(10007773);
   courses[9].setCourseName("Zack");
   courses[9].setGrade(90);
+
+  cout << " Before sorting \n ";
+  printCourses(courses,10);
+  quickSort(courses, 0 ,9); // display before sort
+
+  cout << endl;
+
+  cout << " After sorting \n";
+  printCourses(courses,10);
+
+  return 0;
 }

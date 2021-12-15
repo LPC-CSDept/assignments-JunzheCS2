@@ -92,4 +92,12 @@ int partition(Course *c, int s, int e);
   swapCourses(&c[i+1], &c[e]);
   return i+1;
 }
-void quickSort(Course *c, int s, int e);
+void quickSort(Course *c, int s, int e)
+{
+  if(s<e)
+  {
+    int p = partition(course,s,e);
+    quickSort(course, s, p-1);
+    quickSort(course,p+1, e);
+  }
+}
