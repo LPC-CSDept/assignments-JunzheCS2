@@ -33,4 +33,32 @@ class Course // create a course class
     }
 
     void setCourseID(int courseID)
-}
+    {
+      this-> courseID = courseID;
+    }
+
+    int getCourseName()
+    {
+      return courseName;
+    }
+
+    void setCourseName(string courseName)
+    {
+      this->courseName = courseName;
+    }
+
+    int getGrade()
+    {
+      return grade;
+    }
+
+    void setGrade(int grade)
+    {
+      this-> grade = grade;
+    }
+
+    bool operator<(Course &c) const
+    {
+      return this->courseID < c.courseID;
+    }
+};
