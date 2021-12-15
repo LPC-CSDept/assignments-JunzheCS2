@@ -1,8 +1,5 @@
 #include "Course.hpp"
-void printCourses(Course *c, int size);
-void swapCourses(Course *c1, Course *c2);
-int partition(Course *c, int s, int e);
-void quickSort(Course *c, int s, int e);
+
 
 int main()
 {
