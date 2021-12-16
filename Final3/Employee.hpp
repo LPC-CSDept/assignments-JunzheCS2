@@ -47,7 +47,7 @@ class Employee // create employe class
     {
       return this->hireDate;
     }
-}
+};
 
 class ProductWorker : public Employee// it is derived from the employee class
 {
@@ -82,7 +82,7 @@ class ProductWorker : public Employee// it is derived from the employee class
 
     double getHourlyPayRate()
     {
-      return this->hourlyPayRate = hourlyPayRate;
+      return this->hourlyPayRate;
     }
 
     void setHourlyPayRate(double hourlyPayRate)
@@ -94,4 +94,5 @@ class ProductWorker : public Employee// it is derived from the employee class
     {
       return this->getHourlyPayRate() > prodWorker.getHourlyPayRate();
     }
-}；
+};
+#endif
