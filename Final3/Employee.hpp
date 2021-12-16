@@ -17,7 +17,7 @@ class Employee // create employe class
       this->employeeNumber = 0;
       this->hireDate = " ";
     }
-
+  //getters and setters
     void setName(string name)
     {
       this->name = name;
@@ -27,4 +27,26 @@ class Employee // create employe class
     {
       this->employeeNumber = employeeNumber;
     }
+
+    void setHireDate(string hireDate)
+    {
+      this->hireDate = hireDate;
+    }
+
+    string getName()
+    {
+      return this->name;
+    }
+
+    int getEmployeeNumber()
+    {
+      return this->employeeNumber;
+    }
+
+    string getHireDate()
+    {
+      return this->hireDate;
+    }
 }
+
+class ProductWorker
