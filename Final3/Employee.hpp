@@ -50,3 +50,15 @@ class Employee // create employe class
 }
 
 class ProductWorker
+{
+  private:
+    int shift;
+    double hourlyPayRate;
+  public:
+    ProductWorker()
+    {
+      shift = 1;
+      hourlyPayRate = 1;
+    }
+
+}
