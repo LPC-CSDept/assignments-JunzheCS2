@@ -87,4 +87,9 @@ class ProductWorker : public Employee// it is derived from the employee class
     {
       this->hourlyPayRate = hourlyPayRate;
     }
+
+    bool operator>(ProductWorker prodWorker) //overaloading > operator
+    {
+      return this->getHourlyPayRate() > prodWorker.getHourlyPayRate();
+    }
 }；

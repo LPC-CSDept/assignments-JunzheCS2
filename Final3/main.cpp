@@ -1,5 +1,8 @@
 #include "Employee.hpp"
 
+void findHighestHourlyPayRate();
+void printAll();
+
 int main()
 {
   ProductWorker prodWorkers[10]; //create 10
