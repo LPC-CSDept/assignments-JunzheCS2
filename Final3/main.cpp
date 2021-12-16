@@ -102,6 +102,14 @@ int main()
 
   findHighestHourlyPayRate(prodWorkers, 10);
 
+  if(prodWorkers[9] > prodWorkers[3])
+  {
+    cout << " \nProduction worker " << prodWorkers[8].getName() << " has a pay rate of : " << prodWorkers[8].getHourlyPayRate() << " which is higher than hourly pay rate of " << prodWorkers[3].getName() << " who has hourly pay rate of : " << prodWorkers[3].getHourlyPayRate() << "\n";
+  }
+  else
+  {
+    cout << "\nProduction worker " << prodWorkers[3].getName() << " has a pay rate of : " << prodWorkers[3].getHourlyPayRate() << " which is higher than hourly pay rate of : " << prodWorkers[8].getName() << " who has hourly pay rate of :" << prodWorkers[8].getHourlyPayRate() << "\n";
+  }
   
-  
+  return 0;
 }
