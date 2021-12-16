@@ -49,16 +49,42 @@ class Employee // create employe class
     }
 }
 
-class ProductWorker
+class ProductWorker : public Employee// it is derived from the employee class
 {
   private:
     int shift;
     double hourlyPayRate;
   public:
-    ProductWorker()
+    ProductWorker() // constructor
     {
       shift = 1;
       hourlyPayRate = 1;
     }
 
+    ProductWorker(int shift, double hourlyPayRate) // paramaterize constructor
+    {
+      this->shift = shift;
+      this->hourlyPayRate = hourlyPayRate;
+    }
+
+    //getters and setters
+    int getShift()
+    {
+      return this->shift;
+    }
+
+    void setShift(int shift)
+    {
+      this->shift = shift;
+    }
+
+    double getHourlyPayRate()
+    {
+      return this->hourlyPayRate = hourlyPayRate;
+    }
+
+    void setHourlyPayRate(double hourlyPayRate)
+    {
+      this->hourlyPayRate = hourlyPayRate;
+    }
 }
