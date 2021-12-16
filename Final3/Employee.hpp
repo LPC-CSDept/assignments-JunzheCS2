@@ -87,4 +87,4 @@ class ProductWorker : public Employee// it is derived from the employee class
     {
       this->hourlyPayRate = hourlyPayRate;
     }
-}
+}；
