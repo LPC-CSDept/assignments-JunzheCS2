@@ -54,6 +54,8 @@ class ProductWorker : public Employee// it is derived from the employee class
   private:
     int shift;
     double hourlyPayRate;
+
+    friend void findHighestHourlyPayRate(ProductWorker *, int);
   public:
     ProductWorker() // constructor
     {

@@ -97,4 +97,11 @@ int main()
   prodWorkers[9].setHireDate("12/23/2021");
   prodWorkers[9].setShift(4);
   prodWorkers[9].setHourlyPayRate(17);
+
+  printAll(prodWorkers, 10);
+
+  findHighestHourlyPayRate(prodWorkers, 10);
+
+  
+  
 }
