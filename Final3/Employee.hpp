@@ -13,9 +13,9 @@ class Employee // create employe class
   public:
     Employee() //constructor
     {
-      this->name = " ";
-      this->employeeNumber = 0;
-      this->hireDate = " ";
+      this->name = "John";
+      this->employeeNumber = 10001;
+      this->hireDate = "12/24/2021";
     }
   //getters and setters
     void setName(string name)
@@ -58,7 +58,7 @@ class ProductWorker : public Employee// it is derived from the employee class
     ProductWorker() // constructor
     {
       shift = 1;
-      hourlyPayRate = 1;
+      hourlyPayRate = 20;
     }
 
     ProductWorker(int shift, double hourlyPayRate) // paramaterize constructor
